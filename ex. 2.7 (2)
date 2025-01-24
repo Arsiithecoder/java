@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Number {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a text: ");
+        String text = sc.nextLine();
+        int length = text.length();
+        char first = text.charAt(0);
+        char last = text.charAt(length - 1);
+        System.out.println("Length: " + length);
+        System.out.println("First character: " + first);
+        System.out.println("Last character: " + last);
+
+        sc.close();
+
+     }
+}
