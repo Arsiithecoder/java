@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        String a = Integer.toString(n);
+        String b = Integer.toString(m);
+        System.out.println( m + n + "\n" + a + b);
+
+        sc.close();
+    }
+}
