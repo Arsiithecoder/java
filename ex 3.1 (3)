@@ -1,0 +1,20 @@
+// Purpose: This program asks the user to enter a password and then asks the user to enter the password again. If the passwords are the same, the program prints "The passwords are the same". If the passwords are not the same, the program prints "The passwords are not the same".
+import java.util.Scanner;
+
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the password: ");
+        String password = sc.nextLine();
+        System.out.println("Enter the password again: ");
+        String password2 = sc.nextLine();
+        if (password.equals(password2)) {
+            System.out.println("The passwords are the same");
+        } else {
+            System.out.println("The passwords are not the same");
+        }
+
+        sc.close();
+    }
+}
