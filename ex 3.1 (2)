@@ -1,0 +1,26 @@
+// Program: Compares the length of two strings
+import java.util.Scanner;
+
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a code: ");
+        String firstCode = sc.nextLine();
+        System.out.println("Enter a code: ");
+        String secondCode = sc.nextLine();
+        int firstCodeLength = firstCode.length();
+        int secondCodeLength = secondCode.length();
+        if (firstCodeLength > secondCodeLength) {
+            System.out.println("First code is longer than the second code.");
+        } else if (firstCodeLength < secondCodeLength) {
+            System.out.println("Second code is longer than the first code.");
+        } else if (firstCodeLength == secondCodeLength) {
+            System.out.println("Both codes are of the same length.");
+        } else {
+            System.out.println("Invalid input.");
+        }
+
+        sc.close();
+    }
+}
