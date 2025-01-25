@@ -1,0 +1,23 @@
+// Program: Write a Java program that reads three integer values and returns true if one of the three numbers is "close" to any one of the other numbers (differing from a number by at most 1), while the other two are far. Return false in all other cases.
+
+import java.util.Scanner;
+
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a first number: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter a second number: ");
+        int num2 = sc.nextInt();
+        System.out.println("Enter a third number: ");
+        int num3 = sc.nextInt();
+        if (num1 % 2 == 0 && num2 % 2 == 0 || num1 % 2 == 0 && num3 % 2 == 0 || num2 % 2 == 0 && num3 % 2 == 0) {
+            System.out.println("The most numbers are even");
+        } else {
+            System.out.println("The most numbers are odd");
+        }
+
+        sc.close();
+    }
+}
