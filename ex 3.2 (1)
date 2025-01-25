@@ -1,0 +1,22 @@
+// Purpose: Write a program that reads a text and a letter from the user. The program should check if the letter is in the text and if the text is longer than 20 characters. If the letter is in the text or the text is longer than 20 characters, the program should print a message to the user. If the letter is not in the text or the text is shorter than 20 characters, the program should print a message to the user.
+
+import java.util.Scanner;
+
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a text: ");
+        String text = sc.nextLine();
+        System.out.println("Enter a letter: ");
+        char letter = sc.next().charAt(0);
+        int lenght = text.length();
+        if (text.contains(String.valueOf(letter)) || lenght >= 20) {
+            System.out.println("The letter is in the text or the text is longer than 20 characters.");
+        } else {
+            System.out.println("The letter is not in the text or the text is shorter than 20 characters.");
+        }
+
+        sc.close();
+    }
+}
