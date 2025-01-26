@@ -1,0 +1,56 @@
+// Program to find the intersection of two intervals
+
+import java.util.Scanner;
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter number a1: ");
+        int a1 = input.nextInt();
+        System.out.println("Enter number b1: ");
+        int b1 = input.nextInt();
+        System.out.println("Enter number a2: ");
+        int a2 = input.nextInt();
+        System.out.println("Enter number b2: ");
+        int b2 = input.nextInt();
+
+        if (a1 > b1 || a2 > b2) {
+            System.out.println("Invalid input");
+            System.exit(0);
+        } else if (a1 == a2) {
+            if (b1 == b2) {
+                System.out.println("Intersection: " + a1 + " to " + b1);
+            } else if (b1 < b2) {
+                System.out.println("Intersection: " + a1 + " to " + b1);
+            } else {
+                System.out.println("Intersection: " + a1 + " to " + b2);
+            }
+        } else if (b1 == b2) {
+            if (a1 < a2) {
+                System.out.println("Intersection: " + a2 + " to " + b1);
+            } else {
+                System.out.println("Intersection: " + a1 + " to " + b1);
+            }
+        } else if (a1 < a2 && b1 < b2) {
+            if (b1 < a2) {
+                System.out.println("No intersection");
+            } else {
+                System.out.println("Intersection: " + a2 + " to " + b1);
+            }
+        } else if (a1 > a2 && b1 > b2) {
+            if (b2 < a1) {
+                System.out.println("No intersection");
+            } else {
+                System.out.println("Intersection: " + a1 + " to " + b2);
+            }
+        } else if (a1 < a2 && b1 > b2) {
+            System.out.println("Intersection: " + a2 + " to " + b2);
+        } else if (a1 > a2 && b1 < b2) {
+            System.out.println("Intersection: " + a1 + " to " + b1);
+        } else {
+            System.out.println("No intersection");
+        }
+
+        input.close();
+    }
+}
