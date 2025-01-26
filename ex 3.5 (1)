@@ -1,0 +1,31 @@
+// Program: To check if the second digit of a 3-digit number is equal to the another number
+
+import java.util.Scanner;
+
+class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int a = sc.nextInt();
+        System.out.println("Enter another number: ");
+        int b = sc.nextInt();
+
+        String ta = Integer.toString(a);
+        String tb = Integer.toString(b);
+
+        char lastA = ta.charAt(ta.length() - 2);
+        char lastB = tb.charAt(tb.length() - 1);
+        
+        if (a > 99 && a < 1000) {
+            if (lastA == lastB) {
+                System.out.println("The second digit of the first number is equal to the second number.");
+            } else {
+                System.out.println("The second digit of the first number is not equal to the second number.");
+            }
+        } else {
+            System.out.println("The first number is not a 3-digit number.");
+        }
+        
+        sc.close();
+    }
+}
