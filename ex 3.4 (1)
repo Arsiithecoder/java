@@ -1,0 +1,22 @@
+// Program which takes a java command as input and prints its meaning
+
+import java.util.Scanner;
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a  java command: ");
+        String command = sc.nextLine();
+       
+        switch (command) {
+            case "System.out.println()" -> System.out.println("Prints a line of text");
+            case "if" -> System.out.println("Used to test a condition");
+            case "else" -> System.out.println("Used to execute a block of code if the same condition is false");
+            case "switch" -> System.out.println("Used to select one of many code blocks to be executed");
+            case "case" -> System.out.println("Used to specify a block of code to be executed");
+            case "default" -> System.out.println("Used to specify some code to run if there is no case match");
+            default -> System.out.println("Invalid command");
+        }
+        sc.close();
+    }
+}
