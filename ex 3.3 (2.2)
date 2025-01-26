@@ -1,0 +1,35 @@
+// Programm that reads three numbers and prints if all numbers are even, all numbers are odd, or two numbers are even and one is odd.
+
+import java.util.Scanner;
+
+public class Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number one: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter a number two: ");
+        int num2 = sc.nextInt();
+        System.out.println("Enter a number three: ");
+        int num3 = sc.nextInt();
+
+        if (num1 % 2 == 0 && num2 % 2 == 0 && num3 % 2 == 0) {
+            System.out.println("All numbers are even.");
+        } else if (num1 % 2 != 0 && num2 % 2 != 0 && num3 % 2 != 0) {
+            System.out.println("All numbers are odd.");
+        } else  if (num1 % 2 == 0 && num2 % 2 != 0 && num3 % 2 != 0) {
+            System.out.println("Number one is even and number two and three are odd.");
+        } else if (num1 % 2 != 0 && num2 % 2 == 0 && num3 % 2 != 0) {
+            System.out.println("Number two is even and number one and three are odd.");
+        } else if (num1 % 2 != 0 && num2 % 2 != 0 && num3 % 2 == 0) {
+            System.out.println("Number three is even and number one and two are odd.");
+        } else if (num1 % 2 == 0 && num2 % 2 == 0 && num3 % 2 != 0) {
+            System.out.println("Number one and two are even and number three is odd.");
+        } else if (num1 % 2 == 0 && num2 % 2 != 0 && num3 % 2 == 0) {
+            System.out.println("Number one and three are even and number two is odd.");
+        } else if (num1 % 2 != 0 && num2 % 2 == 0 && num3 % 2 == 0) {
+                System.out.println("Number two and three are even and number one is odd.");
+            }
+
+        sc.close();
+    }
+}
