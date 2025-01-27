@@ -1,0 +1,19 @@
+//This program reads a number N from the user and then prints all the perfect squares that are less than or equal to N.
+
+import java.util.Scanner;
+
+public class Project {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int number = scanner.nextInt();
+        int square = 1;
+        while (square * square <= number) {
+            System.out.println(square * square);
+            square = square + 1;
+        }
+
+        scanner.close();
+    }
+}
