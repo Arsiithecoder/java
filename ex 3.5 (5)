@@ -1,0 +1,29 @@
+//code to check the name of the user and welcome him/her if the name is in the list of names
+
+import java.util.Scanner;
+
+
+public class Project {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the name: ");
+        String name = scanner.nextLine();
+        
+        switch (name) {
+            case "Elena" -> System.out.println("Welcome aboard, Elena!");
+            case "Thomas" -> System.out.println("Welcome aboard, Thomas!");
+            case "Hamza" -> System.out.println("Welcome aboard, Hamza!");
+            case "Khalid" -> System.out.println("Welcome aboard, Khalid!");
+            case "Mona" -> System.out.println("Welcome aboard, Mona!");
+            case "Ali" -> System.out.println("Welcome aboard, Ali!");
+            default -> {
+                System.out.println("You are not allowed to enter the system.");
+                scanner.close();
+                throw new AssertionError();
+            }
+        }
+
+        scanner.close();
+    }
+}
