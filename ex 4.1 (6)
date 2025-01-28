@@ -1,0 +1,22 @@
+// This program reads numbers from the keyboard until the number is not a multiple of 11 and then displays the number of numbers entered and their sum.
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter numbers: ");
+        int  a = 1;
+        int nOn = 0;
+        int Summ = 0;
+
+        while ((a = sc.nextInt() ) % 11 == 0) {
+            nOn++;
+            Summ += a;
+        }
+        System.out.println("Number of numbers: " + nOn);
+        System.out.println("Summ of numbers: " + Summ);
+
+        sc.close();
+    }
+}
