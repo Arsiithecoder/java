@@ -1,0 +1,22 @@
+//This program reads words from the user and counts the number of words entered by the user.
+
+import java.util.Scanner;
+
+public class Project {
+
+    public static void main(String[] args) {
+        System.out.println("Enter words: ");
+        int wordCount = 0;
+
+        try (Scanner sc = new Scanner(System.in)) {
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                String[] words = line.split("\\s+"); // Split the line into words
+                wordCount += words.length;
+                System.out.println("Number of words: " + wordCount);
+            }
+
+        }
+
+    }
+}
