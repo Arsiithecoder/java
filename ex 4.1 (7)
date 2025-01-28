@@ -1,0 +1,19 @@
+// Program to calculate the average rating of the film from 1 to 10. The program will stop when the user enters a number greater than 10 or less than 0. The program will display the average rating of the film.
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        System.out.println("Enter a rating of the film: ");
+        Double rating = 0.0;
+        Double quotes = 0.0;
+        Double avg = 0.0;
+
+        try (Scanner sc = new Scanner(System.in)) {
+            while ((rating = sc.nextDouble()) > 0 && rating <= 10) {
+                quotes++;
+                avg += rating;
+            }
+        }
+        System.out.println("The average rating of the film is: " + avg / quotes);
+    }
+}
