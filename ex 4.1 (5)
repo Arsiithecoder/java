@@ -1,0 +1,21 @@
+// Program to print the numbers from 1 to n and print whether the number is even or odd
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        int n = sc.nextInt();
+        int m = 0;
+        do { 
+            m++;
+            if (m % 2 == 0) {
+                System.out.println("the number " + m + " is Even ");
+            } else {
+                System.out.println("the number " + m + " is Odd ");
+            }
+        } while (m <= n);
+        sc.close();
+    }
+}
