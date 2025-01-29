@@ -1,0 +1,18 @@
+//The program will take a number as input and reverse it. For example, if an input number is 12345, the output should be 54321. The program works for both positive and negative numbers.
+
+import java.util.Scanner;
+
+public class Project {
+
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        String number = sc.nextLine();
+
+        String reversal =  new StringBuilder(number).reverse().toString();
+
+        System.out.println("Reversed number: " + reversal);
+
+        sc.close();
+        }
+}
