@@ -1,0 +1,19 @@
+//This program reads two characters from the user and then reads a list of words from the user. The program then prints all the words that start with a character that is between the two characters read from the user. The program should stop reading words when the user enters the word "STOP".
+
+import java.util.Scanner;
+
+class Project {
+    public static void main (String[] args) {
+        Scanner sc = new Scanner (System.in);
+        String a = sc.next ();
+        String b = sc.next ();
+        char ac = a.charAt (0);
+        char bc = b.charAt (0);
+        while (sc.hasNext()) {
+            String c = sc.next ();
+            if ( c.charAt (0) >= ac && c.charAt(0) <= bc) {
+                System.out.println (c);
+            }
+        }
+    }
+}
