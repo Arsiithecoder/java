@@ -1,0 +1,40 @@
+// This program reads an integer from the user and prints the square, cube, fourth power, fifth power, and sixth power of the integer.
+
+import java.util.Scanner;
+
+class Project {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        while (sc.hasNextInt()) {
+            int a = sc.nextInt();
+
+            for (int b = 2; b <= 6; b++) {
+                switch (b) {
+                    case 2 -> {
+                        int q = a * a;
+                        System.out.print(q + (b < 6 ? " " : ""));
+                    }
+                    case 3 -> {
+                        int w = a * a * a;
+                        System.out.print(w + (b < 6 ? " " : ""));
+                    }
+                    case 4 -> {
+                        int e = a * a * a * a;
+                        System.out.print(e + (b < 6 ? " " : ""));
+                    }
+                    case 5 -> {
+                        int r = a * a * a * a * a;
+                        System.out.print(r + (b < 6 ? " " : ""));
+                    }
+                    case 6 -> {
+                        int t = a * a * a * a * a * a;
+                        System.out.print( t + (b < 6 ? " " : "") + "\n");
+                    }
+                }
+            }
+        }
+
+        sc.close();
+    }
+}
