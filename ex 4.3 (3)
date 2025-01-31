@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Project {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first corner");
+        double a = sc.nextDouble();
+        System.out.println("Enter the second corner");
+        double b = sc.nextDouble();
+        double y = Math.sin(a) + Math.cos(b);
+        System.out.println("The result is: " + y);
+        sc.close();
+    }
+}
