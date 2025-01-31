@@ -1,0 +1,29 @@
+// The program prints the number ladder sequence for the given number.
+
+import java.util.Scanner;
+
+public class NumberLadderSequence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = scanner.nextInt();
+        int count = 0;
+
+        for (int i = 1; count < n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (count == n) {
+                    break;
+                }
+                if (j == 0) {
+                    System.out.print(i);
+                } else {
+                    System.out.print(" " + i);
+                }
+                count++;
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
