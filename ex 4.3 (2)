@@ -1,0 +1,29 @@
+// The program checks if the triangle is valid and if it is, it checks if it is equilateral, isosceles or scalene.
+
+import java.util.Scanner;
+
+
+public class Project {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first corner: ");
+        int x1 = scanner.nextInt();
+        System.out.println("Enter the second corner: ");
+        int x2 = scanner.nextInt();
+        System.out.println("Enter the third corner: ");
+        int x3 = scanner.nextInt();
+        if (x1 + x2 > x3 && x1 + x3 > x2 && x2 + x3 > x1) {
+            System.out.println("The triangle is valid.");
+            if (x1 == x2 && x2 == x3) {
+                System.out.println("The triangle is equilateral.");
+            } else if (x1 == x2 || x1 == x3 || x2 == x3) {
+                System.out.println("The triangle is isosceles.");
+            } else {
+                System.out.println("The triangle is scalene.");
+            }
+        } else {
+            System.out.println("The triangle is not valid.");
+        }
+    }
+}
