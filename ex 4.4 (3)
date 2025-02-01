@@ -1,0 +1,16 @@
+// The program is to create an array of numbers from 1 to n.
+
+import java.util.Scanner;
+    
+public class Project {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int n = scanner.nextInt();
+        int [] array = new int[n];
+        for (int i =  1; i <= array.length; i++) {
+            System.out.print(i + " ");
+        }
+        scanner.close();
+    }
+}
