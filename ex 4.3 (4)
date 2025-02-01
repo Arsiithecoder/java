@@ -1,0 +1,16 @@
+// The program is to calculate the number of elements after the decimal point of the number pi
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of elements after the decimal point:");
+        int n = scanner.nextInt();
+        double a = Math.PI;
+        String format = "%." + n + "f";
+        System.out.println("The number is " + String.format(format, a));
+
+        scanner.close();
+    }
+}
