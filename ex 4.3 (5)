@@ -1,0 +1,20 @@
+// The program is to calculate the number of elements after the decimal point of the number pi
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        double x = scanner.nextDouble();
+        System.out.println("Enter the degree of the root:");
+        double n = scanner.nextDouble();
+        System.out.println("Enter the degree of the number:");
+        double m = scanner.nextDouble();
+        double a = Math.pow(x, 1.0 / n);
+        double b = Math.pow(a, m);
+        System.out.println("The number is " + b);
+
+        scanner.close();
+    }
+}
