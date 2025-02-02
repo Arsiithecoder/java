@@ -1,0 +1,33 @@
+// The program takes the number of elements in the array and the elements of the array as input.
+// The program then prints the elements of the array that are at even positions (excluding the position).
+// The program then prints the sum of the elements at even positions.
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of elements in the array:");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        System.out.println("Enter the elements of the array:");
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                array[i] = i;
+            }
+        }
+        System.out.print("The elements of the array are:");
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0 && i != 0) {
+                System.out.print( " " + array[i] + ",");
+                sum += array[i];
+            }
+        }
+        System.out.println ();
+        System.out.println("The sum of the elements is: " + sum);
+
+        scanner.close();
+    }
+}
+
