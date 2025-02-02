@@ -1,0 +1,20 @@
+// The program is to create an array of numbers from 1 to n and print the first and last element of the array.
+
+import java.util.Scanner;
+
+public class Project {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of character in array:");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = scanner.nextInt();
+        }
+             System.out.println("The first element of array is: " + array[0]);
+            System.out.println("The last element of array is: " + array[array.length - 1]);
+
+        scanner.close();
+    }
+}
