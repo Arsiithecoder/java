@@ -1,0 +1,22 @@
+// This program takes an array of numbers from the user, and then prints the numbers in the array in pairs, starting with the first number and ending with the last number.
+
+import java.util.Scanner;
+
+public class Project {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the numbers for array:");
+        String[] array = scanner.nextLine().split(" ");
+        
+        System.out.print(array[0] + " ");
+        for (int i = 1; i < array.length - 2; i += 2) {
+            System.out.print(array[i + 1] + " " + array[i] + " ");
+        }
+        if (array.length % 2 == 0) {
+            System.out.print(array[array.length - 1]);
+        } else {
+            System.out.print(array[array.length - 2] + " " + array[array.length - 1]);
+        }
+        scanner.close();
+    }
+}
