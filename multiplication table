@@ -1,0 +1,36 @@
+//The program generates a multiplication table of size n x m.
+
+import java.util.Scanner;
+
+public class Table {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter number of rows (n):");
+        int n = input.nextInt();
+        System.out.println("Enter number of columns (m):");
+        int m = input.nextInt();
+        
+        // Input validation
+        if (n <= 0 || m <= 0) {
+            System.out.println("Please enter positive numbers only!");
+            input.close();
+            return;
+        }
+        
+        int[][] multiplicationMatrix = new int[n][m];
+        
+        System.out.println("\nMultiplication Table " + n + "x" + m + ":");
+        
+        for (int i = 0; i < multiplicationMatrix.length; i++) {
+            for (int j = 0; j < multiplicationMatrix[i].length; j++) {
+                multiplicationMatrix[i][j] = (i + 1) * (j + 1);
+                // Format numbers to align properly (assuming numbers < 1000)
+                System.out.printf("%4d", multiplicationMatrix[i][j]);
+            }
+            System.out.println();
+        }
+        
+        input.close();
+    }
+}
